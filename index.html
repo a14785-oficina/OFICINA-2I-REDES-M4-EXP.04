@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício Prático 004 - Framework Bootstrap</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script type="module"
+        src="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        .bg-1 {
+            background-color: blue;
+            color: white;
+            text-align: center;
+        }
+
+        .bg-2 {
+            background-color: red;
+            color: white;
+        }
+
+        .card-body>a {
+            display: table;
+            margin-inline: auto;
+        }
+
+        .card>.form-field {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .card>.form-field input,
+        .card>.form-field label {
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container bg-1">
+        <h1>Hello World</h1>
+        <p>This is a paragraph.</p>
+    </div>
+    <div class="container-fluid bg-2">
+        <h1>Hello World</h1>
+    </div>
+
+    <div class="container">
+        <button type="button" class="btn">Base class</button>
+        <button type="button" class="btn-subtle theme-danger">Danger</button>
+        <hr>
+    </div>
+
+    <div class="container">
+        <section class="card" style="max-width: 320px">
+            <img src="images\dest-NIVEL-IV-Tecnico-de-Sistemas-de-Computacao-e-Redes-–-GPSI-v2.jpg"
+                class="card-img-top" alt="Curso de Sistemas de Computação e Redes – GPSI">
+            <div class="card-body">
+                <h4 class="card-title">Técnico de Sistemas de Computação e Redes – GPSI</h4>
+                <p class="card-text">Curso do nível secundário de Educação. Qualificação profissional de Nível 4.</p>
+                <a href="https://oficina.pt/cursos/tecnico-de-sistemas-de-computacao-e-redes-gpsi/"
+                    class="btn-solid theme-danger">Saber mais</a>
+            </div>
+        </section>
+    </div>
+
+    <div class="container text-center">
+        <hr>
+        <div class="row">
+            <div class="col">
+                <section class="card" style="max-width: 320px">
+                    <img src="images\dest-NIVEL-IV-Tecnico-de-Desenvolvimento-de-Software.jpg"
+                        class="card-img-top" alt="Curso de Desenvolvimento de Software">
+                    <div class="card-body">
+                        <h4 class="card-title">Técnico de Desenvolvimento de Software</h4>
+                        <p class="card-text">Curso do nível secundário de Educação. Qualificação profissional de Nível
+                            4.</p>
+                        <hr>
+                        <a href="https://oficina.pt/cursos/tecnico-a-de-desenvolvimento-de-software-programacao/"
+                            class="btn-solid theme-danger">Saber mais</a>
+                    </div>
+                    <hr>
+                    <div class="form-field">
+                        <input type="checkbox" id="cursoSoftware" class="check">
+                        <label for="cursoSoftware">Selecionar o curso</label>
+                    </div>
+                    <hr>
+                </section>
+            </div>
+            <div class="col">
+                <section class="card" style="max-width: 320px">
+                    <img src="images\dest-NIVEL-V-especialista-ciberseguranca.jpg"
+                        class="card-img-top" alt="Curso de Cibersegurança">
+                    <div class="card-body">
+                        <h4 class="card-title">Técnico especialista em Cibersegurança</h4>
+                        <p class="card-text">PÓS-SECUNDÁRIO | NÍVEL V | 1 ANO E MEIO | DIURNO | GRATUITO</p>
+                        <hr>
+                        <a href="https://oficina.pt/cursos/tecnico-especialista-em-ciberseguranca/"
+                            class="btn-solid theme-info">Saber mais</a>
+                    </div>
+                    <hr>
+                    <div class="form-field">
+                        <input type="checkbox" id="cursoCiberseguranca" class="check">
+                        <label for="cursoCiberseguranca">Selecionar o curso</label>
+                    </div>
+                    <hr>
+                </section>
+            </div>
+            <div class="col">
+                <section class="card" style="max-width: 320px">
+                    <img src="images\dest-NIVEL-V-Tecnico-especialista-Tecnologias-e-Programacao-de-Sistemas-de-Informacao.jpg"
+                        class="card-img-top" alt="Curso de Tecnologias e Programação de Sistemas de Informação">
+                    <div class="card-body">
+                        <h4 class="card-title">Técnico especialista Tecnologias e Programação de Sistemas de Informação
+                        </h4>
+                        <p class="card-text">PÓS-SECUNDÁRIO | NÍVEL V | 1 ANO E MEIO | DIURNO | GRATUITO</p>
+                        <hr>
+                        <a href="https://oficina.pt/cursos/tecnico-de-sistemas-de-computacao-e-redes-gpsi/"
+                            class="btn-solid theme-danger">Saber mais</a>
+                    </div>
+                    <hr>
+                    <div class="form-field">
+                        <input type="checkbox" id="cursoTPSI" class="check">
+                        <label for="cursoTPSI">Selecionar o curso</label>
+                    </div>
+                    <hr>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+    <div class="container my-4">
+        <!-- Formulário de demonstração: sem envio de dados para um servidor. -->
+        <form id="formularioExemplo">
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Endereço de email</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" name="email" autocomplete="email"
+                    aria-describedby="emailHelp">
+                <div id="emailHelp" class="form-text">Nunca partilharemos o teu email com outras pessoas.</div>
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Palavra-passe</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" name="password"
+                    autocomplete="new-password" placeholder="Introduz uma palavra-passe"
+                    aria-describedby="passwordStrengthText">
+                <div class="strength" data-bs-strength>
+                    <div class="strength-segment"></div>
+                    <div class="strength-segment"></div>
+                    <div class="strength-segment"></div>
+                    <div class="strength-segment"></div>
+                </div>
+                <span class="strength-text" id="passwordStrengthText" aria-live="polite"></span>
+            </div>
+            <div class="mb-3 form-field">
+                <input type="checkbox" id="exampleCheck1" class="check">
+                <label for="exampleCheck1">Selecionar esta opção</label>
+            </div>
+            <button type="submit" class="btn-solid theme-primary">Enviar</button>
+            <p id="formStatus" class="form-text" role="status"></p>
+        </form>
+    </div>
+    <script>
+        document.getElementById('formularioExemplo').addEventListener('submit', function (event) {
+            event.preventDefault();
+            document.getElementById('formStatus').textContent =
+                'Formulário de demonstração: os dados não foram enviados.';
+        });
+    </script>
+</body>
+
+</html>
